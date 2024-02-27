@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = userManager.singInUser(usernameByInput);
 
         if(result.success) {
+            localStorage.setItem('usernameLogin', usernameByInput)
+            
             return window.location.href = "../tasks.html"
         }else {
             alert('User Not Found')
