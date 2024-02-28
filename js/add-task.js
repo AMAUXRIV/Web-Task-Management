@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = taskManager.saveTask(taskData);
 
         if(result.success) {
-            // return window.location.href = "../signin.html"
-            alert('Task Created')
+            return window.location.href = "../tasks.html"
         }else {
             console.log("Failed")
         }

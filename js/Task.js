@@ -25,4 +25,27 @@ class Task {
         };
 
     }
+
+    completeTask(taskId){
+    const index = this.tasks.findIndex((task) => task.id === taskId);
+    if(index !== -1) {
+        this.tasks[index].isCompleted = true;
+        this.updateLocalStorage();
+    }
+}
+
+
+
+    deleteTask(taskId){
+        console.log(taskId);
+        const index = this.tasks.findIndex((task) => task.id === taskId);
+        if(index !== -1) {
+            this.tasks.splice(index, 1) ;
+            this.updateLocalStorage();
+        }
+
+    }
+    updateLocalStorage () {
+        localStorage.setItem('tasks',JSON.stringify(this.tasks));
+    }
 }

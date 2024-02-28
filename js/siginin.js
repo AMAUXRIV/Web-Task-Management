@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             return window.location.href = "../tasks.html"
         }else {
-            alert('User Not Found')
+            alert('Daftar Dulu Deck')
 
             console.log(result.message)
         }
